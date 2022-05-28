@@ -1,0 +1,25 @@
+import React from 'react'
+import "./Galerie.css"
+
+
+const GalerieArticle = ({img,title,index,show}) => {
+
+ 
+    
+  return (
+ 
+      <article onClick={show} className= {`article${index}`}  >
+        <div className='card-container'>
+          <div className='card-img'>
+            <img src={img} alt="couple" />
+          </div>
+          <div className='card-title'>
+            <h3>{title}</h3>
+          </div>
+        </div>
+      </article>
+   
+  )
+}
+
+export default GalerieArticle

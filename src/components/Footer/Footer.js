@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <span>©2022 Charles Cantin. All rights reserved.</span>
-      <div className='logo'>
+      <div className='logos'>
       <img src={Logo} alt="logo"  />
       </div>
       

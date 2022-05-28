@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react'
-import { Link,NavLink } from 'react-router-dom'
+import {NavLink } from 'react-router-dom'
 import Logo from "../Logo.svg"
 import { FaInstagram, FaFacebook} from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa';
