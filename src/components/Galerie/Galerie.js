@@ -6,12 +6,13 @@ import { useNavigate } from 'react-router-dom'
 
 const Galerie = () => {
 const navigate = useNavigate()
-  const showIndex = (index)=>{
-    navigate(`/Galerie/${index}`)
+
+
+  const showIndex = (titre)=>{
+    navigate(`/Galerie/${titre}`)
   }
 
- 
- 
+  
   return (
    <main className='container'>
     <h2 className='title'>GALERIE</h2>
@@ -23,7 +24,7 @@ const navigate = useNavigate()
           
           return (
             <Fragment key={index}>
-              <GalerieArticle show={()=>showIndex(index)}   img={data.image} title={data.title} index={index} />
+              <GalerieArticle show={()=>showIndex(data.title)}   img={data.image} title={data.title} index={index} />
             </Fragment>
             )
         })

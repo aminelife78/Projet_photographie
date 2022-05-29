@@ -5,7 +5,6 @@ const Accueil = () => {
   return (
 
     <main>
-     
       <div className='img'>
         <div className='filter'></div>
       </div>
