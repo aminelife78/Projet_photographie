@@ -3,6 +3,7 @@ import {NavLink } from 'react-router-dom'
 import Logo from "../Logo.svg"
 import { FaInstagram, FaFacebook} from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa';
+
 import "./Header.css"
 
 
@@ -32,16 +33,16 @@ const Header = () => {
       <div className='logos'>
         <img src={Logo} alt="logo" />
         
-        {screenWith < 700 && <FaBars onClick={()=>setShowBtnMenu(!showBtnMenu)}  className='btn-menu' />}
+        {screenWith < 900 && <FaBars onClick={()=>setShowBtnMenu(!showBtnMenu)}  className='btn-menu' />}
       </div>
       
-      {(showBtnMenu || screenWith > 700) && (<ul>
+      {(showBtnMenu || screenWith > 900) && (<ul>
         <li><NavLink className='lien'  to="/">Accueil</NavLink></li>
         <li><NavLink className='lien' to="Galerie">Galerie</NavLink></li>
-        <li><NavLink className='lien' to="Tarifs">Tarifs Et Prestations</NavLink></li>
+        <li><NavLink className='lien' to="Tarifs">Tarifs et Prestations</NavLink></li>
         <li><NavLink className='lien' to="Contact">Contact</NavLink></li>
       </ul>)}
-      {screenWith > 700 && <div className='social-icones'>
+      {screenWith > 900 && <div className='social-icones'>
         <FaFacebook />
         <FaInstagram />
     </div>}

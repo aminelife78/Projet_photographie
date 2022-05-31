@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import {  useParams,useNavigate } from 'react-router-dom'
 import { allImages  } from '../Data/Data'
 
+
 const Photo = () => {
   const photos = ["Mariage","Grossesse","Bébé","Famille","Baptême","Couple","Portrait"]
   const params = useParams()
@@ -20,21 +21,21 @@ const Photo = () => {
     <Fragment>
 
     <div className='container-bodys'>
-    <p onClick={handlRetour}>Retour Vers Galerie</p>
+    <p onClick={handlRetour}>Retour</p>
     <div className='container-photo'>
     
       {
         images.map((img,index)=>{
           return (
-          <Fragment key={index}>
-              <img src={img} alt="images" />
-          </Fragment>
+          <div className='content-img' key={index}>
+                <img src={img} alt="images" className='myImg' />
+          </div>
             )
         })
       }
 
     </div>
-    <p onClick={handlRetour}>Retour Vers Galerie</p>
+    <p onClick={handlRetour}>Retour</p>
     </div>
     </Fragment>
   )

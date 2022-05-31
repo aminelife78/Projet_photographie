@@ -8,10 +8,10 @@ const GalerieArticle = ({img,title,index,show}) => {
     
   return (
  
-      <article onClick={show} className= {`article${index}`}  >
+      <article onClick={show} className= {`article${index} card-galerie`}  >
         <div className='card-container'>
           <div className='card-img'>
-            <img src={img} alt="couple" />
+            <img className='myImg' src={img} alt="couple" />
           </div>
           <div className='card-title'>
             <h3>{title}</h3>
