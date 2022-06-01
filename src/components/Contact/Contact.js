@@ -16,26 +16,27 @@ const Contact = () => {
           </div>
           <div className="content-form">
             <h3>Nous envoyer un message</h3>
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
+              <input type="hidden" name="form-name" value="contact" />
               <div className="input-content">
                 <label for="nom">Nom: </label>
                 <br />
-                <input type="text" id="nom" />
+                <input type="text" name="nom" id="nom" />
               </div>
               <div className="input-content">
                 <label for="email">Email: </label>
                 <br />
-                <input type="text" id="email" />
+                <input type="text" name="email" id="email" />
               </div>
               <div className="input-content">
                 <label>Objet: </label>
                 <br />
-                <input type="text" id="objet" />
+                <input type="text" name="objet" id="objet" />
               </div>
               <div className="input-content">
                 <label>Message: </label>
                 <br />
-                <textarea type="text" id="message" />
+                <textarea type="text" name="message" id="message" />
               </div>
               <button type="submit" className="validForm">
                 Envoyer
