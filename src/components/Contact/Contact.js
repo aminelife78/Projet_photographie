@@ -16,7 +16,7 @@ const Contact = () => {
           </div>
           <div className="content-form">
             <h3>Nous envoyer un message</h3>
-            <form name="contact" netlify>
+            <form name="contact" method="POST" data-netlify="true">
               <div className="input-content">
                 <label for="nom">Nom: </label>
                 <br />
