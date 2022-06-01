@@ -1,0 +1,16 @@
+.myScroll .scroll{
+  width: 40px;
+  height: 40px;
+  color: var(--valid);
+  margin: 0;
+  
+ 
+}
+
+
+.myScroll{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+

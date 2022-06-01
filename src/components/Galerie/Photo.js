@@ -4,8 +4,9 @@ import { allImages  } from '../Data/Data'
 
 
 const Photo = () => {
-  const photos = ["Mariage","Grossesse","Bébé","Famille","Baptême","Couple","Portrait"]
+  const photos = ["mariage","grossesse","bébé","famille","baptême","couple","portrait"]
   const params = useParams()
+  console.log(params)
   const data = params.photoId
   const indexData = photos.indexOf(data)
   // const {image1,image2,image3,image4,image5,image6} = allImages[indexData] 

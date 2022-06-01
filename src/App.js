@@ -7,6 +7,7 @@ import Tarifs from './components/Tarifs/Tarifs';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Photo from './components/Galerie/Photo';
+import Scroll from './components/Scroll/Scroll';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         
         
       </Routes>
+      <Scroll />
       <Footer />
     </div>
   );

@@ -103,3 +103,53 @@ export const allImages = [
 
 ]
  
+
+// Tarifs component
+
+export const card_Tarifs = [
+  {
+    image:"https://cdn.pixabay.com/photo/2016/10/06/03/30/man-1718099_1280.jpg",
+    title:"Juste moi",
+    text : "Séance pour une personne, en extérieur ou en studio",
+    prix : "130 euros"
+
+  },
+  {
+    image:"https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2425121_1280.jpg",
+    title:"Pour deux",
+    text: "Pour deux personnes, en extérieur ou en studio",
+    prix: "195 euros"
+
+
+
+  },
+  {
+    image:"https://cdn.pixabay.com/photo/2017/04/07/23/20/father-2212101_1280.jpg",
+    title:"Famille",
+    text: "Pour la famille ou les amis jusqu’à 4 personnes, en extérieur ou en studio 30 euros en supplément par personne au-delà de 4 (hormis enfant jusqu’à 2 ans)",
+    prix: "210 euros"
+
+  },
+  {
+    image:"https://cdn.pixabay.com/photo/2020/12/24/15/42/woman-5857744_1280.jpg",
+    title:"Il était une fois ",
+    text: "Photo de grossesse (À votre domicile, en extérieur ou en studio)",
+    prix: "160 euros"
+
+  },
+  {
+    image:"https://cdn.pixabay.com/photo/2016/11/19/14/28/bed-1839564_1280.jpg",
+    title:"Mon bébé ",
+    text: "Photo d’enfant jusqu’à 3 ans (photo à domicile)",
+    prix: "100 euros"
+
+  },
+  {
+    image:"https://cdn.pixabay.com/photo/2014/11/27/05/01/baptism-547222_1280.jpg",
+    title:"J’immortalise l’événement",
+    text: "sur mesure prestation de mariage ou baptême sur devis",
+    prix: "Sur devis"
+
+  },
+ 
+]

@@ -1,5 +1,6 @@
 import React,{Fragment} from 'react'
 import GalerieArticle from './GalerieArticle'
+
 import {card_galerie} from "../Data/Data"
 import "./Galerie.css"
 import { useNavigate } from 'react-router-dom'
@@ -8,10 +9,13 @@ const Galerie = () => {
 const navigate = useNavigate()
 
 
+
+
   const showIndex = (titre)=>{
-    navigate(`/Galerie/${titre}`)
+    navigate(`/Galerie/${titre.toLowerCase()}`)
   }
 
+  
   
   return (
    <main className='container'>
