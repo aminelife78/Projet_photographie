@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react'
-import {NavLink } from 'react-router-dom'
+import {NavLink,Link } from 'react-router-dom'
 import Logo from "../Logo.svg"
 import { FaInstagram, FaFacebook} from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa';
@@ -8,6 +8,7 @@ import "./Header.css"
 
 
 const Header = () => {
+  
   const [screenWith, setScreenWith] = useState(window.innerWidth)
   const [showBtnMenu, setShowBtnMenu] = useState(false)
 
@@ -31,8 +32,7 @@ const Header = () => {
   return (
     <header>
       <div className='logos'>
-        <img src={Logo} alt="logo" />
-        
+        <Link to="/"><img  src={Logo} alt="logo" /></Link>
         {screenWith < 900 && <FaBars onClick={()=>setShowBtnMenu(!showBtnMenu)}  className='btn-menu' />}
       </div>
       
@@ -43,8 +43,8 @@ const Header = () => {
         <li><NavLink className='lien' to="Contact">Contact</NavLink></li>
       </ul>)}
       {screenWith > 900 && <div className='social-icones'>
-        <FaFacebook />
-        <FaInstagram />
+        <a href='http://facebook.com'><FaFacebook /></a>
+        <a href='http://instagrame.com'><FaInstagram /></a>
     </div>}
    
     </header>

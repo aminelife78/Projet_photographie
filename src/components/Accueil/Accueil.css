@@ -15,6 +15,15 @@
   background-color: rgba(0, 0, 0, 0.3);
   
 }
+.titleSize{
+  font-size: 62px;
+}
+
+.titleSize span{
+  font-size: 52px;
+  color: var(--light);
+}
+
 
 main h1{
   width: 100%;
@@ -22,7 +31,7 @@ main h1{
   top: 50%;
   text-align: center;
   margin: 0 auto;
-  font-size: 72px;
+  font-size: 58px;
   color: var(--white);
   transform: translateY(50%);
   
@@ -38,6 +47,13 @@ main h1{
     font-size: 42px;
     
     
+    
+  }
+  hr{
+    width: 60px;
+    height: 5px;
+    color: var(--secondary);
+    background: var(--white);
   }
 
 
