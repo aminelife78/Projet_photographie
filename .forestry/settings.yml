@@ -14,8 +14,8 @@ sections:
   create: documents
   match: "**/*"
   new_doc_ext: md
-upload_dir: src/images
-public_path: ''
+upload_dir: save
+public_path: "/save"
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
