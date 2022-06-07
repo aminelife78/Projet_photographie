@@ -3,13 +3,7 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections:
-- type: directory
-  path: src/components
-  label: Galerie
-  create: documents
-  match: "**/*"
-  new_doc_ext: md
+sections: 
 upload_dir: src/images
 public_path: src/images
 front_matter_path: ''
