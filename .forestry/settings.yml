@@ -4,9 +4,11 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
-  path: src/images
-  label: images
+- type: directory
+  path: src
+  label: components
+  create: all
+  match: "**/*"
 upload_dir: src/images
 public_path: ''
 front_matter_path: ''
