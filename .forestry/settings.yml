@@ -3,7 +3,12 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
+sections:
+- type: directory
+  path: src/components/Data/Data.js
+  label: galerie
+  create: all
+  match: "**/*"
 upload_dir: public/images/portrait
 public_path: "/public/images/portrait"
 front_matter_path: ''
