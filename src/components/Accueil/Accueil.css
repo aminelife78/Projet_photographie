@@ -1,6 +1,6 @@
 .img{
   
-  background-image: url("../../images/accueil.jpg") ;
+  background-image: url("../accueil.jpg") ;
   background-position: center;
   background-repeat:no-repeat;
   background-size: cover;
