@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: src/components
+  path: src/components/Galerie
   label: components
   create: documents
   match: "**/*"
