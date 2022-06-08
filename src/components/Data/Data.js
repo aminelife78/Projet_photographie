@@ -88,12 +88,12 @@ export const allImages = [
     "../images/couple/woman-1979272_1280.jpg",
   ],
   [
-    "../images/portrait/happy-1836445_1280.jpg",
-    "../images/portrait/man-1283231_1280.jpg",
-    "../images/portrait/man-1845814_1280.jpg",
-    "../images/portrait/man-1869624_1280.jpg",
-    "../images/portrait/man-2933991_1280.jpg",
-    "../images/portrait/senior-3336451_1280.jpg",
+    "../images/portrait/portrait1.jpg",
+    "../images/portrait/portrait2.jpg",
+    "../images/portrait/portrait3.jpg",
+    "../images/portrait/portrait4.jpg",
+    "../images/portrait/portrait5.jpg",
+    "../images/portrait/portrait6.jpg",
   ],
 ];
 
