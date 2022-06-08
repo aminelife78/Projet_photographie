@@ -5,8 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: src/components/Galerie/galerie.js
-  label: Galerie.js
+  path: public/images
+  label: public
   create: all
   match: "**/*"
 upload_dir: images
