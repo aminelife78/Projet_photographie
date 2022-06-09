@@ -9,6 +9,8 @@ sections:
   label: Post
   create: documents
   match: "**/*"
+  templates:
+  - mariage
 upload_dir: public/images/portrait
 public_path: "/public/images/portrait"
 front_matter_path: ''
