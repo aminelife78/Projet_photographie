@@ -1,10 +1,4 @@
 ---
 label: mariage
 hide_body: true
-fields:
-- name: enfants
-  type: file
-  config:
-    maxSize: 64
-  default: "/public/images/portrait/portrait2.jpg"
-  label: enfants
+fields: []
