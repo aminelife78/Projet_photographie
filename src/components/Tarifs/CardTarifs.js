@@ -15,9 +15,8 @@ const CardTarifs = () => {
         'Accept':'Application/json'
       }
     }).then(res=>res.json()).then(response=>{
-      console.log(response)
+    
       setTarifs(response)
-     
       setIsloading(false)
   
     })
@@ -36,7 +35,7 @@ const CardTarifs = () => {
       myTarifs.map((tarif,index)=>{
 
       return(
-    <article className={`tarifs${index} card-container-tarifs`}>
+    <article key={index} className={`tarifs${index} card-container-tarifs`}>
       <div className="card-img-tarifs">
         <img className="myImg-tarifs" src={lien + tarif.attributes.image.data[0].attributes.formats.small.url} alt="couple" />
       </div>

@@ -9,10 +9,8 @@ const Tarifs = () => {
       <h2 className='title'>TARIFS ET PRESTATIONS</h2>
       <div className='separator'></div>
       <div className='content-tarifs'>
-      <CardTarifs    />
-        
+        <CardTarifs />
       </div>
-    
     </main>
   )
 }
