@@ -34,8 +34,7 @@
   background: var(--white);
   border-radius: 10px 10px 10px 10px;
   margin: 0 auto;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+ 
   
 }
 
@@ -61,15 +60,16 @@
   justify-content: space-between;
   align-items: flex-start;
   
+  
 
 }
 .card-body-tarifs p{
   margin: 0;
   padding: 20px 20px;
-  font-size: 16px;
-  opacity: 0.9;
+  font-size: 14px;
+  opacity: 0.5;
   color: var(--secondary);
-  
+ 
 }
 .card-body-tarifs h3{
   padding: 20px 20px 0 20px;
