@@ -20,6 +20,7 @@ const Photo = () => {
     navigate("/Galerie")
   }
   useEffect(()=>{
+
     fetch(`http://localhost:1337/api/${data}?populate=image`,
     {
       method:'GET',
@@ -27,15 +28,14 @@ const Photo = () => {
         'Accept':'Application/json'
       }
     }).then(res=>res.json()).then(response=>{
-      console.log(response)
+      
       setPosts(response)
-     
       setIsloading(false)
   
     })
     
   
-  })
+  },[data])
 
   const myPosts = !isloading && posts.data
   const lien = "http://localhost:1337"

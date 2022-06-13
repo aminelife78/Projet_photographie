@@ -23,7 +23,7 @@ const CardTarifs = () => {
     })
     
   
-  })
+  },[])
 
   const myTarifs = !isloading && tarifs.data
   const lien = "http://localhost:1337"
@@ -44,7 +44,7 @@ const CardTarifs = () => {
         <h3>{tarif.attributes.titre}</h3>
         <p>{tarif.attributes.text}</p>
         <div className="prix-tarifs">
-          <h4>{tarif.attributes.prix} euro</h4>
+          <h4>{tarif.attributes.prix} </h4>
         </div>
       </div>
     </article>)})
