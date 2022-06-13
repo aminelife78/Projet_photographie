@@ -66,8 +66,8 @@
 .card-body-tarifs p{
   margin: 0;
   padding: 20px 20px;
-  font-size: 14px;
-  opacity: 0.5;
+  font-size: 16px;
+  opacity: 0.8;
   color: var(--secondary);
  
 }
