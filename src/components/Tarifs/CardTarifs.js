@@ -8,7 +8,7 @@ const CardTarifs = () => {
   const [tarifs,setTarifs] = useState(null)
 
   useEffect(()=>{
-    fetch(`http://localhost:1337/api/tarifs?populate=image`,
+    fetch(`https://app-cantin.herokuapp.com/api/tarifs?populate=image`,
     {
       method:'GET',
       headers:{

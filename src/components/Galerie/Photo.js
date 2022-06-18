@@ -21,7 +21,7 @@ const Photo = () => {
   }
   useEffect(()=>{
 
-    fetch(`http://localhost:1337/api/${data}?populate=image`,
+    fetch(`https://app-cantin.herokuapp.com/api/${data}?populate=image`,
     {
       method:'GET',
       headers:{
