@@ -25,7 +25,7 @@ const CardTarifs = () => {
   },[])
 
   const myTarifs = !isloading && tarifs.data
-  const lien = "http://localhost:1337"
+  const lien = "https://app-cantin.herokuapp.com"
 
 
   return (
