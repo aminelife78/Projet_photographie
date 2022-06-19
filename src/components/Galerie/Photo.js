@@ -14,7 +14,7 @@ const Photo = () => {
     navigate("/Galerie");
   };
   useEffect(() => {
-    fetch(`http://localhost:1337//api/${data}?populate=image`, {
+    fetch(`https://app-charle-cantin.herokuapp.com//api/${data}?populate=image`, {
       method: "GET",
       headers: {
         Accept: "Application/json",
@@ -28,7 +28,7 @@ const Photo = () => {
   }, [data]);
 
   const myPosts = !isloading && posts.data;
-  const lien = "http://localhost:1337/";
+  const lien = "https://app-charle-cantin.herokuapp.com";
 
   return (
     <Fragment>
