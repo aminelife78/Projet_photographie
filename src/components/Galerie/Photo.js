@@ -14,7 +14,7 @@ const Photo = () => {
     navigate("/Galerie");
   };
   useEffect(() => {
-    fetch(`https://app-charle-cantin.herokuapp.com//api/${data}?populate=image`, {
+    fetch(`https://intense-crag-86216.herokuapp.com/api/${data}?populate=image`, {
       method: "GET",
       headers: {
         Accept: "Application/json",
@@ -28,7 +28,7 @@ const Photo = () => {
   }, [data]);
 
   const myPosts = !isloading && posts.data;
-  const lien = "https://app-charle-cantin.herokuapp.com";
+  const lien = "https://intense-crag-86216.herokuapp.com";
 
   return (
     <Fragment>
