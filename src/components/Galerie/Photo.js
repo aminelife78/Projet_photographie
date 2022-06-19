@@ -14,12 +14,15 @@ const Photo = () => {
     navigate("/Galerie");
   };
   useEffect(() => {
-    fetch(`https://intense-crag-86216.herokuapp.com/api/${data}?populate=image`, {
-      method: "GET",
-      headers: {
-        Accept: "Application/json",
-      },
-    })
+    fetch(
+      `https://intense-crag-86216.herokuapp.com/api/${data}?populate=image`,
+      {
+        method: "GET",
+        headers: {
+          Accept: "Application/json",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((response) => {
         setPosts(response);
@@ -41,8 +44,8 @@ const Photo = () => {
                 <div key={index} className="content-img">
                   <img
                     src={
-                      lien +
-                      post.attributes.image.data[0].attributes.formats.small.url
+                    
+                      post.attributes.image.data[0].attributes.formats.medium.url
                     }
                     alt="helo"
                   />
