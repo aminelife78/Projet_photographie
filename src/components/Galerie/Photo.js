@@ -31,7 +31,8 @@ const Photo = () => {
   }, [data]);
 
   const myPosts = !isloading && posts.data;
-  const lien = "https://intense-crag-86216.herokuapp.com";
+  console.log(myPosts)
+
 
   return (
     <Fragment>
