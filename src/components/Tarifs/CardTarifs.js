@@ -25,7 +25,7 @@ const CardTarifs = () => {
   },[])
 
   const myTarifs = !isloading && tarifs.data
-  const lien = "https://intense-crag-86216.herokuapp.com"
+ 
 
 
   return (
@@ -37,7 +37,7 @@ const CardTarifs = () => {
       return(
     <article key={index} className={`tarifs${index} card-container-tarifs`}>
       <div className="card-img-tarifs">
-        <img className="myImg-tarifs" src={lien + tarif.attributes.image.data[0].attributes.formats.small.url} alt="couple" />
+        <img className="myImg-tarifs" src={ tarif.attributes.image.data[0].attributes.formats.small.url} alt="couple" />
       </div>
       <div className="card-body-tarifs">
         <h3>{tarif.attributes.titre}</h3>
