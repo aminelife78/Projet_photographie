@@ -30,7 +30,7 @@
 /* tarifs card */
 .card-container-tarifs{
   width: 400px;
-  height: 400px;
+  height: 450px;
   background: var(--white);
   border-radius: 10px 10px 10px 10px;
   margin: 0 auto;
@@ -54,7 +54,7 @@
 }
 
 .card-body-tarifs{
-  height: calc(400px - 200px);
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,8 +67,8 @@
   margin: 0;
   padding: 20px 20px;
   font-size: 16px;
-  opacity: 0.8;
-  color: var(--secondary);
+  opacity: 0.98;
+  color: var(--primary);
  
 }
 .card-body-tarifs h3{

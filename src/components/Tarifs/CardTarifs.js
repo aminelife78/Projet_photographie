@@ -1,5 +1,3 @@
-
-
 import React,{useEffect,useState} from "react";
 import "./Tarifs.css";
 
@@ -40,8 +38,10 @@ const CardTarifs = () => {
         <img className="myImg-tarifs" src={ tarif.attributes.image.data[0].attributes.formats.small.url} alt="couple" />
       </div>
       <div className="card-body-tarifs">
-        <h3>{tarif.attributes.titre}</h3>
-        <p>{tarif.attributes.text}</p>
+        
+          <h3>{tarif.attributes.titre}</h3>
+          <p>{tarif.attributes.text}</p>
+        
         <div className="prix-tarifs">
           <h4>{tarif.attributes.prix} </h4>
         </div>
