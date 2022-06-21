@@ -58,6 +58,7 @@
   border-radius: 5px;
   margin-top: 7px;
   outline: none;
+  resize : none;
 }
 
 .content-form .validForm{
