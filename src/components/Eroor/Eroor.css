@@ -1,0 +1,14 @@
+.isError{
+ 
+  height: 600px;
+
+}
+
+.isError p{
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 65px;
+
+ 
+}

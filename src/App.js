@@ -8,6 +8,7 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Photo from './components/Galerie/Photo';
 import Scroll from './components/Scroll/Scroll';
+import Eroor from './components/Eroor/Eroor';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="Galerie/:photoId" element={<Photo />} />
         <Route path="Tarifs" element={<Tarifs />} />
         <Route path="Contact" element={<Contact />} />
+        <Route path='*' element={<Eroor />} />
         
         
       </Routes>
