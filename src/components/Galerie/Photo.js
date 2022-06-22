@@ -1,11 +1,12 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Photo = () => {
   const [isloading, setIsloading] = useState(true);
   const [posts, setPosts] = useState(null);
   const params = useParams();
-  const data = params.photoId;
+  const datas = params.photoId;
 
   // const {image1,image2,image3,image4,image5,image6} = allImages[indexData]
 
@@ -14,24 +15,18 @@ const Photo = () => {
     navigate("/Galerie");
   };
   useEffect(() => {
-    fetch(
-      `https://intense-crag-86216.herokuapp.com/api/${data}?populate=image`,
-      {
-        method: "GET",
-        headers: {
-          Accept: "Application/json",
-        },
-      }
-    )
-      .then((res) => res.json())
+    axios.get(
+      `https://intense-crag-86216.herokuapp.com/api/${datas}?populate=image`)
       .then((response) => {
-        setPosts(response);
+        setPosts(response.data.data);
+        console.log(response.data.data)
         setIsloading(false);
-      });
-  }, [data]);
+      }).catch(err=>{
+        console.log(err)
+      })
+  }, [datas]);
 
-  const myPosts = !isloading && posts.data;
-  console.log(myPosts)
+  
 
 
   return (
@@ -40,13 +35,13 @@ const Photo = () => {
         <p onClick={handlRetour}>Retour</p>
         <div className="container-photo">
           {!isloading &&
-            myPosts.map((post, index) => {
+            posts.map((post, index) => {
               return (
                 <div key={index} className="content-img">
                   <img
                     src={
-                    
-                      post.attributes.image.data[0].attributes.formats.medium.url
+                      post.attributes.image.data[0].attributes.formats.medium
+                        .url
                     }
                     alt="helo"
                   />
@@ -96,4 +91,4 @@ const Photo = () => {
   // )
 };
 
-export default Photo;
+export default Photo

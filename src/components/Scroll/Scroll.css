@@ -3,15 +3,25 @@
   height: 40px;
   color: var(--primary);
   margin: 0;
-  
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
  
 }
 
+.scroll-icon{
+  font-size: 14px;
 
+}
 .myScroll{
   position: fixed;
-  right: 0;
-  bottom: 0;
+  right: 7px;
+  bottom: 7px;
+  width: 150px;
+  height: 30px;
+  background: var(--secondary);
 }
 
 

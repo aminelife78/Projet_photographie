@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaScroll } from 'react-icons/fa';
+import { FiArrowUp } from 'react-icons/fi';
 
 import "./Scroll.css"
 
@@ -23,7 +23,8 @@ const Scroll = () => {
 
   return (
     <div className='myScroll'>
-      <FaScroll  className='scroll' onClick={scrollTop}/>
+      <p className='scroll' onClick={scrollTop}>RETOUR EN HAUT <FiArrowUp className='scroll-icon' /></p>
+      
     </div>
   )
 }
