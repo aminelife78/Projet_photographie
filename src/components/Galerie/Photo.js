@@ -40,8 +40,9 @@ const Photo = () => {
                 <div key={index} className="content-img">
                   <img
                     src={
-                      post.attributes.image.data[0].attributes.formats.medium
-                        .url
+                      
+                      post.attributes.image.data[0].attributes.formats.small.url
+                     
                     }
                     alt="helo"
                   />
