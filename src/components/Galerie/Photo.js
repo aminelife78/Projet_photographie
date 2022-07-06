@@ -6,10 +6,9 @@ const Photo = () => {
   const [isloading, setIsloading] = useState(true);
   const [posts, setPosts] = useState(null);
   const params = useParams();
-  
+
   const datas = params.photoId;
-  console.log(datas)
-  
+  console.log(datas);
 
   // const {image1,image2,image3,image4,image5,image6} = allImages[indexData]
 
@@ -18,19 +17,19 @@ const Photo = () => {
     navigate("/Galerie");
   };
   useEffect(() => {
-    axios.get(
-      `https://intense-crag-86216.herokuapp.com/api/${datas}?populate=image`)
+    axios
+      .get(
+        `https://intense-crag-86216.herokuapp.com/api/${datas}?populate=image`
+      )
       .then((response) => {
         setPosts(response.data.data);
-        console.log(response.data.data)
+        console.log(response.data.data);
         setIsloading(false);
-      }).catch(err=>{
-        console.log(err)
       })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [datas]);
-
-  
-
 
   return (
     <Fragment>
@@ -42,12 +41,7 @@ const Photo = () => {
               return (
                 <div key={index} className="content-img">
                   <img
-                    src={
-                      
-                      post.attributes.image.data[0].attributes.formats.small.url
-                      
-                     
-                    }
+                    src={post.attributes.image.data[0].attributes.url}
                     alt="helo"
                   />
                 </div>
@@ -96,4 +90,4 @@ const Photo = () => {
   // )
 };
 
-export default Photo
+export default Photo;
