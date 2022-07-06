@@ -6,7 +6,10 @@ const Photo = () => {
   const [isloading, setIsloading] = useState(true);
   const [posts, setPosts] = useState(null);
   const params = useParams();
+  
   const datas = params.photoId;
+  console.log(datas)
+  
 
   // const {image1,image2,image3,image4,image5,image6} = allImages[indexData]
 
@@ -42,6 +45,7 @@ const Photo = () => {
                     src={
                       
                       post.attributes.image.data[0].attributes.formats.small.url
+                      
                      
                     }
                     alt="helo"
