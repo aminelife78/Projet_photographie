@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react'
+import React,{Fragment,memo} from 'react'
 import GalerieArticle from './GalerieArticle'
 
 import {card_galerie} from "../Data/Data"
@@ -16,7 +16,7 @@ const navigate = useNavigate()
   }
 
   
-  
+  console.log("je suis dans galerie")
   return (
    <main className='container'>
     <h2 className='title'>GALERIE</h2>
@@ -27,8 +27,9 @@ const navigate = useNavigate()
         card_galerie.map((data,index)=>{
           
           return (
+            
             <Fragment key={index}>
-              <GalerieArticle show={()=>showIndex(data.title)}   img={data.image} title={data.title} index={index} />
+                <GalerieArticle show={()=>showIndex(data.title)}   img={data.image} title={data.title} index={index} />
             </Fragment>
             )
         })
@@ -41,4 +42,4 @@ const navigate = useNavigate()
   )
 }
 
-export default Galerie
+export default memo(Galerie)

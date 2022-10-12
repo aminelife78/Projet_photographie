@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect,memo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -30,6 +30,8 @@ const Photo = () => {
         console.log(err);
       });
   }, [datas]);
+
+  console.log("je suis dans photo")
 
   return (
     <Fragment>
@@ -90,4 +92,4 @@ const Photo = () => {
   // )
 };
 
-export default Photo;
+export default memo(Photo);

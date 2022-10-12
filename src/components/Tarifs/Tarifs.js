@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{memo} from 'react'
 import "./Tarifs.css"
 import CardTarifs from './CardTarifs'
 
@@ -15,4 +15,4 @@ const Tarifs = () => {
   )
 }
 
-export default Tarifs
+export default memo(Tarifs)
