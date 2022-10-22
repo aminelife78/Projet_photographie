@@ -1,4 +1,4 @@
-import React,{Fragment,memo} from 'react'
+import React,{Fragment} from 'react'
 import GalerieArticle from './GalerieArticle'
 
 import {card_galerie} from "../Data/Data"
@@ -16,7 +16,7 @@ const navigate = useNavigate()
   }
 
   
-  console.log("je suis dans galerie")
+  
   return (
    <main className='container'>
     <h2 className='title'>GALERIE</h2>
@@ -42,4 +42,4 @@ const navigate = useNavigate()
   )
 }
 
-export default memo(Galerie)
+export default Galerie
