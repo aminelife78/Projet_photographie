@@ -41,8 +41,11 @@ const Header = () => {
         <li><NavLink className='lien' to="Galerie">Galerie</NavLink></li>
         <li><NavLink className='lien' to="Tarifs">Tarifs et Prestations</NavLink></li>
         <li><NavLink className='lien' to="Contact">Contact</NavLink></li>
+        <li><NavLink className='lien' to="login">admin</NavLink></li>
+        
       </ul>)}
       {screenWith > 900 && <div className='social-icones'>
+         
         <a href='http://facebook.com'><FaFacebook /></a>
         <a href='http://instagrame.com'><FaInstagram /></a>
     </div>}

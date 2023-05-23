@@ -1,0 +1,93 @@
+.container-tarifs {
+  overflow-x: auto;
+  text-align: center;
+}
+
+.btn_add {
+  background-color: #fff; /* Green */
+  border: 2px solid #4caf50;
+  color: #000;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn_add:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.form_tarifs {
+  height: 200px;
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: var(--light);
+  padding: 20px;
+  border-radius: 5px;
+  padding-bottom: 50px;
+}
+.form_tarifs input {
+  margin: 5px 0;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 2px;
+  height: 20px;
+  width: 250px;
+}
+
+.form_tarifs button {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: var(--valid);
+  margin-top: 20px;
+}
+
+.title-form-tarifs {
+  display: inline-block;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+#tarifs {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tarifs td,
+#tarifs th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tarifs tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#tarifs tr:hover {
+  background-color: #ddd;
+}
+
+#tarifs th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+  .btn_add {
+    margin-right: 10px;
+  }
+}

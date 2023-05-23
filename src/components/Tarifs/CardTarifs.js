@@ -3,11 +3,11 @@ import "./Tarifs.css";
 
 const CardTarifs = () => {
   const [isloading, setIsloading] = useState(true);
-  const [tarifs, setTarifs] = useState(null);
+  const [tarifs, setTarifs] = useState([]);
 
   useEffect(() => {
     fetch(
-      `https://intense-crag-86216.herokuapp.com/api/tarifs?populate=image`,
+      `http://localhost:8080/api/v1/tarifs`,
       {
         method: "GET",
         headers: {
@@ -17,17 +17,17 @@ const CardTarifs = () => {
     )
       .then((res) => res.json())
       .then((response) => {
-        setTarifs(response);
+        setTarifs(response.data);
+       
         setIsloading(false);
       });
   }, []);
 
-  const myTarifs = !isloading && tarifs.data;
 
   return (
     <>
       {!isloading &&
-        myTarifs.map((tarif, index) => {
+        tarifs.map((tarif, index) => {
           return (
             <article
               key={index}
@@ -37,17 +37,17 @@ const CardTarifs = () => {
                 <img
                   className="myImg-tarifs"
                   src={
-                    tarif.attributes.image.data[0].attributes.formats.small.url
+                    tarif.image_couvert
                   }
                   alt="couple"
                 />
               </div>
               <div className="card-body-tarifs">
-                <h3>{tarif.attributes.titre}</h3>
-                <p>{tarif.attributes.text}</p>
+                <h3>{tarif.title}</h3>
+                <p>{tarif.descreption}</p>
 
                 <div className="prix-tarifs">
-                  <h4>{tarif.attributes.prix} </h4>
+                  <h4>{tarif.tarif} </h4>
                 </div>
               </div>
             </article>

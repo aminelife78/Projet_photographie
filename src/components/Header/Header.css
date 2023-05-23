@@ -3,9 +3,10 @@ header{
   /* background-image:  url(../../images/accueil.jpg); */
   background-color: var(--primary);
   display: flex;
+  
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 7px 20px;
   font-size: 16px;  
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
@@ -62,6 +63,8 @@ ul li .lien:hover{
   padding-bottom: 26px;
   border-bottom: 6px solid var(--light);
 }
+
+
 
 @media screen and (max-width: 900px) {
   header{
@@ -125,3 +128,6 @@ ul li .lien:hover{
   }
 
 }
+
+
+

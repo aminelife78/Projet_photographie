@@ -4,13 +4,10 @@ import axios from "axios";
 
 const Photo = () => {
   const [isloading, setIsloading] = useState(true);
-  const [posts, setPosts] = useState(null);
+  const [posts, setPosts] = useState([]);
   const params = useParams();
-
+  console.log(params)
   const datas = params.photoId;
-  console.log(datas);
-
-  // const {image1,image2,image3,image4,image5,image6} = allImages[indexData]
 
   const navigate = useNavigate();
   const handlRetour = () => {
@@ -19,7 +16,7 @@ const Photo = () => {
   useEffect(() => {
     axios
       .get(
-        `https://intense-crag-86216.herokuapp.com/api/${datas}?populate=image`
+        `http://localhost:8080/api/v1/galerie?categorieId=${datas}`
       )
       .then((response) => {
         setPosts(response.data.data);
@@ -31,7 +28,7 @@ const Photo = () => {
       });
   }, [datas]);
 
-  console.log("je suis dans photo")
+
 
   return (
     <Fragment>
@@ -43,7 +40,7 @@ const Photo = () => {
               return (
                 <div key={index} className="content-img">
                   <img
-                    src={post.attributes.image.data[0].attributes.url}
+                    src={post.image}
                     alt="helo"
                   />
                 </div>

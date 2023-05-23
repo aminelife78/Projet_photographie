@@ -1,18 +1,30 @@
-import React,{Fragment} from 'react'
+import React,{Fragment,useState,useEffect} from 'react'
 import GalerieArticle from './GalerieArticle'
-
-import {card_galerie} from "../Data/Data"
+import axios from "axios";
 import "./Galerie.css"
 import { useNavigate } from 'react-router-dom'
 
 const Galerie = () => {
 const navigate = useNavigate()
 
+const [categories, setCategories] = useState([])
+
+useEffect(() => {
+  axios.get(`http://localhost:8080/api/v1/categories`).then(response=>{
+    setCategories(response.data.data)
+  }).catch(err=>console.log(err))
+
+}, [])
 
 
 
-  const showIndex = (titre)=>{
-    navigate(`/Galerie/${titre.toLowerCase()}`)
+
+
+
+
+
+  const showIndex = (id)=>{
+    navigate(`/Galerie/${id}`)
   }
 
   
@@ -24,12 +36,12 @@ const navigate = useNavigate()
     <div className='body-container'>
     <div className='contents' >
       {
-        card_galerie.map((data,index)=>{
+        categories && categories.map((data,index)=>{
           
           return (
             
-            <Fragment key={index}>
-                <GalerieArticle show={()=>showIndex(data.title)}   img={data.image} title={data.title} index={index} />
+            <Fragment key={data.id}>
+                <GalerieArticle show={()=>showIndex(data.id)}   img={data.image_couvert} title={data.title} index={data.id} />
             </Fragment>
             )
         })

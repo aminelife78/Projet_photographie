@@ -6,7 +6,6 @@ import "./Galerie.css"
 const GalerieArticle = ({img,title,index,show}) => {
 
  
-  console.log("je suis dans galerie article")
   return (
  
       <article onClick={show} className= {`article${index} card-galerie`}  >
